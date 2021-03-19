@@ -1,0 +1,30 @@
+* {
+    background-color: black;
+    color: white;
+}
+
+#blogpost-grid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 50% 1fr;
+    grid-template-areas: 
+        ". bp ."
+        ". ft .";
+}
+
+.blogpost {
+    padding: 10vh 5vh;
+    grid-area: bp;
+    border: 1px white solid;
+    border-top: none;
+    border-bottom: none;
+}
+
+.post-footer {
+    grid-area: ft;
+}
+
+.blogpost h1 {
+    font-size: 3em;
+    text-align: center;
+}

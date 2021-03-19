@@ -1,0 +1,204 @@
+
+
+#grid-container {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: 
+    "nav nav nav nav nav nav nav nav"
+    ". . . . . . . . "
+    ". hd hd hd hd hd hd hd"
+    ". . st st st st st st"
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . ."
+    ". . . . . . . .";
+
+}
+
+#flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+    
+
+.nav {
+    grid-area: nav;
+    display: block;
+    padding-left: 2vw;
+}
+
+.nav-item {
+    margin: 0 1vw;
+    text-decoration: none;
+}
+
+
+.heading {
+    grid-area: hd;
+    font-size: 3em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.subtitle {
+    grid-area: st;
+    padding: 0;
+    margin: 0;
+}
+
+.box {
+    border: 1px red solid; 
+}
+
+.title {
+    height: 100vh;
+    background-image: url(images/smoke2.jpg);
+    background-size: cover;
+    background-position: top center;
+   
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: "Questrial", sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+#grid-container-posts {
+    display: grid;
+    grid-template-rows: 1fr 25vh 25vh 1fr;
+    grid-template-columns: 1fr 25vh 25vh 25vh 1fr;
+    grid-template-areas: 
+        " . . . . ."
+        " . bp1 bp2 bp3 ."
+        " . bp4 bp5 bp6 ."
+        " . . . . .";
+}
+
+#blogpost1 {
+    grid-area: bp1;
+}
+
+#blogpost2 {
+    grid-area: bp2;
+}
+
+#blogpost3 {
+    grid-area: bp3;
+}
+
+#blogpost4 {
+    grid-area: bp4;
+}
+
+#blogpost5 {
+    grid-area: bp5;
+}
+
+#blogpost6 {
+    grid-area: bp6;
+}
+
+.posts-page, #about, #contact {
+    height: 100vh;
+    width: 100vw;
+}
+
+.jigsaw1 {
+    font-size: 12px; 
+     width: auto;
+     height: auto;
+     margin: 0;
+     position: relative;
+     border-radius: 5%;
+     background-color: inherit;
+     text-decoration: none;
+   }
+   
+   .jigsaw1,
+   .jigsaw1 span {
+    background-color: black; 
+    border-color: white;
+    border: 1px white solid;
+   }
+   
+   .jigsaw1 .t {
+     width: 50%;
+     height: 25%;
+     position: absolute;
+     top: calc(-25% - 1px); /*adjust for border width */
+     left: 25%;
+     border-top-left-radius: 50% 100%;
+     border-top-right-radius: 50% 100%;
+     border-bottom: 0;
+     background-color: inherit;
+   }
+   
+   .jigsaw1 .r {
+     width: 25%;
+     height: 50%;
+     position: absolute;
+     top: 25%;
+     left: 100%;
+     border-top-right-radius: 100% 50%;
+     border-bottom-right-radius: 100% 50%;
+     border-left: 0;
+     background-color: inherit;
+     z-index: 1;
+   }
+   
+   .jigsaw1 .b { 
+     width: 50%;
+     height: 25%;
+     position: absolute;
+     top: 75%;
+     left: 25%;
+     border-top-left-radius: 50% 100%;
+     border-top-right-radius: 50% 100%;
+     border-bottom: 0;
+   }
+   
+   .jigsaw1 .l { 
+     width: 25%;
+     height: 50%;
+     position: absolute;
+     top: 25%;
+     left: -1px; /* adjust for border width */
+     border-top-right-radius: 100% 50%;
+     border-bottom-right-radius: 100% 50%;
+     border-left: 0;
+   }
+
+  .jigsaw1:hover, .jigsaw1 .t:hover, .jigsaw1 .r:hover {
+       background-color: white;
+       color: black;
+   } 
+
+.flex-container {
+       display: flex;
+       align-items: top;
+       justify-content: center;
+       
+   }
+
+.post-title {
+       color: inherit;
+   }
+
+.scroll-container {
+    scroll-snap-type: y mandatory;
+}
+
+.scroll-child {
+    scroll-snap-align: start;
+}
+  
